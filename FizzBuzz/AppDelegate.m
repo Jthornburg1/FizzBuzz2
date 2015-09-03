@@ -16,9 +16,28 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+//    NSArray *nums = @[@1, @2, @3, @4, @452];
+//    
+//    NSLog(@"%ld", (long)[self sumNumsFromArray:nums]);
+        
+    
+    
     return YES;
 }
+
+//- (NSInteger)sumNumsFromArray:(NSArray *)nums
+//{
+//    NSInteger sum = 0;
+//    for (NSNumber *num in nums) {
+//        sum += [num integerValue];
+//    }
+//    return sum;
+//}
+
+
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

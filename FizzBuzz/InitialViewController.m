@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 jonathan thornburg. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "InitialViewController.h"
 
-@interface ViewController ()
+@interface InitialViewController ()
 
 @end
 
-@implementation ViewController
+@implementation InitialViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

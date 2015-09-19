@@ -1,10 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ma4-Q8-Ukn">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ma4-Q8-Ukn">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Hanoi-->
+        <scene sceneID="GdR-15-6tW">
+            <objects>
+                <viewController title="Hanoi" id="2Ic-w2-zIL" customClass="HanoiViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zFO-1H-v0Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZSE-G0-Unu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WIS-8O-0JV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHY-T9-ZhY">
+                                <rect key="frame" x="30" y="30" width="560" height="511"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.9215686917" green="0.91372555489999996" blue="0.61960786580000005" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="31"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.094117656350135803" green="0.1098039299249649" blue="0.45098042488098145" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZSE-G0-Unu" firstAttribute="top" secondItem="yHY-T9-ZhY" secondAttribute="bottom" constant="10" id="5yU-MA-G26"/>
+                            <constraint firstItem="yHY-T9-ZhY" firstAttribute="top" secondItem="zFO-1H-v0Z" secondAttribute="bottom" constant="10" id="Di1-g5-3aW"/>
+                            <constraint firstItem="yHY-T9-ZhY" firstAttribute="leading" secondItem="WIS-8O-0JV" secondAttribute="leadingMargin" constant="10" id="IiJ-Lt-wTS"/>
+                            <constraint firstItem="yHY-T9-ZhY" firstAttribute="trailing" secondItem="WIS-8O-0JV" secondAttribute="trailingMargin" constant="10" id="mRT-ns-DkQ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Hanoi" image="chili_pepper_filled-25" id="hUJ-cm-lYb"/>
+                    <connections>
+                        <outlet property="textView" destination="yHY-T9-ZhY" id="iad-M5-Us3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="klb-v5-dKl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="659" y="-381"/>
+        </scene>
         <!--FizzBuzz-->
         <scene sceneID="M0W-g4-rka">
             <objects>
@@ -18,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tny-fx-b2J">
-                                <rect key="frame" x="66" y="60" width="468" height="451"/>
+                                <rect key="frame" x="30" y="30" width="540" height="511"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" red="0.72156864404678345" green="0.61568629741668701" blue="0.16078431904315948" alpha="1" colorSpace="deviceRGB"/>
@@ -28,10 +67,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.59215688705444336" green="0.12941177189350128" blue="0.58823531866073608" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="Tny-fx-b2J" firstAttribute="top" secondItem="ic5-5E-sY9" secondAttribute="bottom" constant="40" id="IAn-wr-bsB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Tny-fx-b2J" secondAttribute="trailing" constant="50" id="RSb-Cf-yvC"/>
-                            <constraint firstItem="Tny-fx-b2J" firstAttribute="leading" secondItem="Pe9-uZ-utt" secondAttribute="leadingMargin" constant="50" id="UpV-ga-py4"/>
-                            <constraint firstItem="SRX-dp-Sds" firstAttribute="top" secondItem="Tny-fx-b2J" secondAttribute="bottom" constant="40" id="iQT-Sy-vKA"/>
+                            <constraint firstItem="Tny-fx-b2J" firstAttribute="top" secondItem="ic5-5E-sY9" secondAttribute="bottom" constant="10" id="IAn-wr-bsB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tny-fx-b2J" secondAttribute="trailing" constant="10" id="RSb-Cf-yvC"/>
+                            <constraint firstItem="Tny-fx-b2J" firstAttribute="leading" secondItem="Pe9-uZ-utt" secondAttribute="leadingMargin" constant="10" id="UpV-ga-py4"/>
+                            <constraint firstItem="SRX-dp-Sds" firstAttribute="top" secondItem="Tny-fx-b2J" secondAttribute="bottom" constant="10" id="iQT-Sy-vKA"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="FizzBuzz" image="bumblebee-25" id="jpZ-Ps-eGP"/>
@@ -56,7 +95,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSK-sy-k9X">
-                                <rect key="frame" x="72" y="71" width="456" height="429"/>
+                                <rect key="frame" x="30" y="30" width="540" height="511"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -66,10 +105,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.74117648599999997" green="0.1019607931" blue="0.2588235438" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="bSK-sy-k9X" secondAttribute="trailing" constant="56" id="5a9-eX-W8f"/>
-                            <constraint firstItem="YdV-E5-5mt" firstAttribute="top" secondItem="bSK-sy-k9X" secondAttribute="bottom" constant="51" id="FJc-aV-uzs"/>
-                            <constraint firstItem="bSK-sy-k9X" firstAttribute="top" secondItem="joa-vT-63c" secondAttribute="bottom" constant="51" id="MoA-wK-0Td"/>
-                            <constraint firstItem="bSK-sy-k9X" firstAttribute="leading" secondItem="c52-8b-Hx5" secondAttribute="leadingMargin" constant="56" id="iM0-Ps-7kO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bSK-sy-k9X" secondAttribute="trailing" constant="10" id="5a9-eX-W8f"/>
+                            <constraint firstItem="YdV-E5-5mt" firstAttribute="top" secondItem="bSK-sy-k9X" secondAttribute="bottom" constant="10" id="FJc-aV-uzs"/>
+                            <constraint firstItem="bSK-sy-k9X" firstAttribute="top" secondItem="joa-vT-63c" secondAttribute="bottom" constant="10" id="MoA-wK-0Td"/>
+                            <constraint firstItem="bSK-sy-k9X" firstAttribute="leading" secondItem="c52-8b-Hx5" secondAttribute="leadingMargin" constant="10" id="iM0-Ps-7kO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="PrimesArray" image="octopus_filled-25" id="PFw-4s-vke"/>
@@ -94,9 +133,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xU-Jx-DmA">
-                                <rect key="frame" x="66" y="70" width="468" height="431"/>
+                                <rect key="frame" x="30" y="30" width="540" height="511"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="41"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -104,10 +143,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="7xU-Jx-DmA" secondAttribute="trailing" constant="50" id="DHc-wX-fAZ"/>
-                            <constraint firstItem="7xU-Jx-DmA" firstAttribute="top" secondItem="dfA-1L-9IW" secondAttribute="bottom" constant="50" id="SN2-FG-ZHm"/>
-                            <constraint firstItem="7xU-Jx-DmA" firstAttribute="leading" secondItem="drc-Z3-Ruw" secondAttribute="leadingMargin" constant="50" id="ZgI-5N-5x9"/>
-                            <constraint firstItem="r1G-AH-1aL" firstAttribute="top" secondItem="7xU-Jx-DmA" secondAttribute="bottom" constant="50" id="jjx-7x-mwE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7xU-Jx-DmA" secondAttribute="trailing" constant="10" id="DHc-wX-fAZ"/>
+                            <constraint firstItem="7xU-Jx-DmA" firstAttribute="top" secondItem="dfA-1L-9IW" secondAttribute="bottom" constant="10" id="SN2-FG-ZHm"/>
+                            <constraint firstItem="7xU-Jx-DmA" firstAttribute="leading" secondItem="drc-Z3-Ruw" secondAttribute="leadingMargin" constant="10" id="ZgI-5N-5x9"/>
+                            <constraint firstItem="r1G-AH-1aL" firstAttribute="top" secondItem="7xU-Jx-DmA" secondAttribute="bottom" constant="10" id="jjx-7x-mwE"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="AddArray" image="cat_filled-25" id="nPW-rE-CUL"/>
@@ -134,6 +173,7 @@
                         <segue destination="fij-22-wDa" kind="relationship" relationship="viewControllers" id="0x9-U0-fDz"/>
                         <segue destination="k7Y-NX-b1R" kind="relationship" relationship="viewControllers" id="dGJ-BE-VJ1"/>
                         <segue destination="l0b-gY-mHK" kind="relationship" relationship="viewControllers" id="rmB-BE-SfT"/>
+                        <segue destination="2Ic-w2-zIL" kind="relationship" relationship="viewControllers" id="hDC-ZZ-IW5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jxu-pD-S8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -152,8 +192,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xth-mj-tHz">
-                                <rect key="frame" x="66" y="70" width="468" height="480"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xth-mj-tHz">
+                                <rect key="frame" x="30" y="30" width="540" height="511"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" red="0.91372555494308472" green="0.89803928136825562" blue="0.37647062540054321" alpha="1" colorSpace="deviceRGB"/>
@@ -163,10 +203,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.20000001788139343" green="0.40392160415649414" blue="0.10588236153125763" alpha="1" colorSpace="deviceRGB"/>
                         <constraints>
-                            <constraint firstItem="cyM-7W-kUt" firstAttribute="top" secondItem="Xth-mj-tHz" secondAttribute="bottom" constant="50" id="Dhr-9v-Krl"/>
-                            <constraint firstItem="Xth-mj-tHz" firstAttribute="leading" secondItem="3tD-xQ-Gb0" secondAttribute="leadingMargin" constant="50" id="IC3-3S-4tZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Xth-mj-tHz" secondAttribute="trailing" constant="50" id="SfS-E5-o9M"/>
-                            <constraint firstItem="Xth-mj-tHz" firstAttribute="top" secondItem="dyF-d8-e4x" secondAttribute="bottom" constant="50" id="UHH-7m-IcU"/>
+                            <constraint firstItem="cyM-7W-kUt" firstAttribute="top" secondItem="Xth-mj-tHz" secondAttribute="bottom" constant="10" id="Dhr-9v-Krl"/>
+                            <constraint firstItem="Xth-mj-tHz" firstAttribute="leading" secondItem="3tD-xQ-Gb0" secondAttribute="leadingMargin" constant="10" id="IC3-3S-4tZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xth-mj-tHz" secondAttribute="trailing" constant="10" id="SfS-E5-o9M"/>
+                            <constraint firstItem="Xth-mj-tHz" firstAttribute="top" secondItem="dyF-d8-e4x" secondAttribute="bottom" constant="10" id="UHH-7m-IcU"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="WTGraph" image="tree-25" id="eO7-Fe-deL"/>
@@ -175,6 +215,14 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uUS-q1-oZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="09A-dA-UiA">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </objects>
             <point key="canvasLocation" x="2110" y="-1111"/>
         </scene>
@@ -182,6 +230,7 @@
     <resources>
         <image name="bumblebee-25" width="25" height="25"/>
         <image name="cat_filled-25" width="25" height="25"/>
+        <image name="chili_pepper_filled-25" width="25" height="25"/>
         <image name="octopus_filled-25" width="25" height="25"/>
         <image name="tree-25" width="25" height="25"/>
     </resources>

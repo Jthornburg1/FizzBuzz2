@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D26934FE1B95EBE500911EE0 /* BlackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26934FD1B95EBE500911EE0 /* BlackViewController.m */; };
 		D26935011B98700500911EE0 /* TechChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26935001B98700500911EE0 /* TechChallengeViewController.m */; };
+		D269353A1B9F194D00911EE0 /* HanoiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26935391B9F194D00911EE0 /* HanoiViewController.m */; };
 		D26F35801B63BC0400B5E56A /* RedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26F357F1B63BC0400B5E56A /* RedViewController.m */; };
 		D26F35831B63BEB100B5E56A /* PurpleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D26F35821B63BEB100B5E56A /* PurpleViewController.m */; };
 		D26FB26C1B61A26D005A580D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D26FB26B1B61A26D005A580D /* main.m */; };
@@ -35,6 +36,8 @@
 		D26934FD1B95EBE500911EE0 /* BlackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlackViewController.m; sourceTree = "<group>"; };
 		D26934FF1B98700500911EE0 /* TechChallengeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TechChallengeViewController.h; sourceTree = "<group>"; };
 		D26935001B98700500911EE0 /* TechChallengeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TechChallengeViewController.m; sourceTree = "<group>"; };
+		D26935381B9F194D00911EE0 /* HanoiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HanoiViewController.h; sourceTree = "<group>"; };
+		D26935391B9F194D00911EE0 /* HanoiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HanoiViewController.m; sourceTree = "<group>"; };
 		D26F357E1B63BC0400B5E56A /* RedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedViewController.h; sourceTree = "<group>"; };
 		D26F357F1B63BC0400B5E56A /* RedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedViewController.m; sourceTree = "<group>"; };
 		D26F35811B63BEB100B5E56A /* PurpleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PurpleViewController.h; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 				D26FB2701B61A26D005A580D /* InitialViewController.h */,
 				D26FB2711B61A26D005A580D /* InitialViewController.m */,
 				D26FB2731B61A26D005A580D /* Main.storyboard */,
+				D26935381B9F194D00911EE0 /* HanoiViewController.h */,
+				D26935391B9F194D00911EE0 /* HanoiViewController.m */,
 				D26934FF1B98700500911EE0 /* TechChallengeViewController.h */,
 				D26935001B98700500911EE0 /* TechChallengeViewController.m */,
 				D26934FC1B95EBE500911EE0 /* BlackViewController.h */,
@@ -245,6 +250,7 @@
 				D26FB26F1B61A26D005A580D /* AppDelegate.m in Sources */,
 				D26935011B98700500911EE0 /* TechChallengeViewController.m in Sources */,
 				D26FB26C1B61A26D005A580D /* main.m in Sources */,
+				D269353A1B9F194D00911EE0 /* HanoiViewController.m in Sources */,
 				D26F35801B63BC0400B5E56A /* RedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

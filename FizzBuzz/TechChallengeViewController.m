@@ -22,7 +22,7 @@
     
     [self graphFromArbitraryNumbersArray:arbitraryNumbers];
     
-    self.textView.text = @"WillowTree asked me to create a function that, given an arbitrary array of integers as input, gives a 'graph' as output. by 'graph' they meant on one line print each Different integer that occurs in the array and, above each integer, print a column of stars with one star for each time the integer below occurs in the array.";
+    self.textView.text = @"WillowTree asked me to create a function that, given an arbitrary array of integers as input, gives a 'graph' as output. by 'graph' they meant on one line print each different integer that occurs in the array and, above each integer, print a column of stars with one star for each time the integer below occurs in the array.";
 
 }
 
@@ -40,12 +40,36 @@
             [dictionary setObject:[NSNumber numberWithInteger:1] forKey:num];
         }
     }
+    
+    
+//    for (NSNumber *value in [dictionary allValues]) {
+//        if ([value intValue] < max) {
+//            return; // Keep on going!
+//        }
+//    }
+    
+    
+    
     NSMutableString *nums = [NSMutableString new];
     for (NSNumber *key in [dictionary allKeys]) {
         [nums appendString:[key description]];
     }
-    NSMutableArray *valuesArray = [NSMutableArray new];
+    
     NSLog(@"%@", nums);
+    
+    [self findBiggestNumberInArray:[dictionary allValues]];
+}
+
+- (NSInteger)findBiggestNumberInArray:(NSArray *)arr
+{
+    NSInteger highestNumber = 0;
+    
+    for (NSNumber *number in arr) {
+        if ([number integerValue] > highestNumber ) {
+            highestNumber = [number integerValue];
+        }
+    }
+    return highestNumber;
 }
 
 

@@ -20,7 +20,7 @@
     
     self.textView.text = @"Look down at the debugging console for a comma-separated list of prime numbers. The upper limit of those numbers can be changed in the viewDidLoad method of RedViewController class.";
     
-    [self primeArrayFromBeneathMax:2000];
+    [self primeArrayFromBeneathMax:100];
 
 }
 

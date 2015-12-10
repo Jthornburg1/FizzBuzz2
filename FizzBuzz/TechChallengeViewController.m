@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *arbitraryNumbers = @[@2,@8,@4, @2, @8, @7, @4, @2, @5];
+    NSArray *arbitraryNumbers = @[@2,@8,@4, @2, @8, @7, @4, @2, @5, @3, @3, @3, @3, @3];
     
     [self graphFromArbitraryNumbersArray:arbitraryNumbers];
     
@@ -31,23 +31,48 @@
     NSMutableDictionary *dictionary = [NSMutableDictionary new];
     
     for (NSNumber *num in array) {
+        
+        // If key already exists increment its value by 1.
         if ([dictionary objectForKey:num]) {
             NSInteger number = [[dictionary objectForKey:num] integerValue];
             number+=1;
             [dictionary setObject:[NSNumber numberWithInteger:number] forKey:num];
         }else{
+            
+            // If it doesn't exist, make it and set its value to 1.
             [dictionary objectForKey:num];
             [dictionary setObject:[NSNumber numberWithInteger:1] forKey:num];
         }
     }
     
+    // Find the highest number of all the dictionaries values (number of stars)
+    // Also each numbers index in "allValues"
+    NSInteger highestNumber = 0;
+    NSInteger indexNumber = 0;
     
-//    for (NSNumber *value in [dictionary allValues]) {
-//        if ([value intValue] < max) {
-//            return; // Keep on going!
-//        }
-//    }
+    for (NSNumber *number in [dictionary allValues]) {
+        if ([number integerValue] > highestNumber ) {
+            highestNumber = [number integerValue];
+        }
+        indexNumber = [[dictionary allValues] indexOfObject:number];
+    }
     
+    
+// Print Strings with stars.
+    NSMutableString *starMutString = [NSMutableString new];
+    NSString *starString = [NSString new];
+    NSInteger i = highestNumber;
+    for (i = highestNumber; i > 0; i--) {
+        for (NSNumber *index in [dictionary allValues]) {
+            if (!([index integerValue] == i)) {
+                [starMutString appendString:@""];
+            }else{
+                [starMutString appendString:@"*"];
+            }
+        }
+        starString = starMutString;
+        NSLog(starString);
+    }
     
     
     NSMutableString *nums = [NSMutableString new];
@@ -56,21 +81,13 @@
     }
     
     NSLog(@"%@", nums);
-    
-    [self findBiggestNumberInArray:[dictionary allValues]];
 }
 
-- (NSInteger)findBiggestNumberInArray:(NSArray *)arr
-{
-    NSInteger highestNumber = 0;
-    
-    for (NSNumber *number in arr) {
-        if ([number integerValue] > highestNumber ) {
-            highestNumber = [number integerValue];
-        }
-    }
-    return highestNumber;
-}
+
+
+
+
+
 
 
 - (void)didReceiveMemoryWarning {
